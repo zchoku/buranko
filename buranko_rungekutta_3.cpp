@@ -102,15 +102,12 @@ void RungeKutta::cal(vector<double> &x, double t, double dt)
 
 int main(int argc, char *argv[])
 {
-  int np=4;
-  if (argc!=np+1) {
-    cout << "Enter (Nt,delta, keisu_w_a,a)" << endl;
-    exit (0);
-  }
+  
 int Nt = atoi(argv[1]);
 double del = atof(argv[2]);
 double keisu_w_a = atof(argv[3]);
 double a = atof(argv[4]);
+double t_fin
 RungeKutta run(del,a,keisu_w_a);
 double w_0 = run.get_w0();
 double T = 2.*M_PI/w_0;
@@ -162,7 +159,7 @@ string t_fin_st = ss_t_fin.str();
 
 
 string FILE_NAME = "Nt" + Nt_st  + "del" + del_st + "a" + a_st + "keisu" + keisu_omega_a_st + "x0" + x0_st + "t_fin" + t_fin_st +  "_RK_jusin.eps";
-string OPEN_FILE_NAME = "open ./eps_jusin/" + FILE_NAME;
+string OPEN_FILE_NAME = "open " + FILE_NAME;
 string command = "gnuplot -e \"filename = \'" + FILE_NAME +
 "\';del_ = \'" + del_st + "\';keisu_omega_a_ = \'"
  + keisu_omega_a_st + "\';a_ = \'" + a_st + "\';"

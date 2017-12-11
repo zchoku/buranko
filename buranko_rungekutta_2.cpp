@@ -148,7 +148,7 @@ string keisu_omega_a_st = ss_keisu_omega_a.str();
 
 
 string FILE_NAME = "Nt" + Nt_st  + "del" + del_st + "a" + a_st + "keisu" + keisu_omega_a_st + "_RK.eps";
-string OPEN_FILE_NAME = "open ./eps/" + FILE_NAME;
+string OPEN_FILE_NAME = "open " + FILE_NAME;
 string command = "gnuplot -e \"filename = \'" + FILE_NAME +
 "\';del_ = \'" + del_st + "\';keisu_omega_a_ = \'"
  + keisu_omega_a_st + "\';a_ = \'" + a_st + "\';"

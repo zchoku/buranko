@@ -9,7 +9,7 @@ a = gprintf("%.2f",a_);
 datfile = "RK.dat"
 
 set term postscript eps enhanced color "" 25
-set output "eps/".filename
+set output filename
 
 set title "del=".del.", {/Symbol w}_a=".keisu_omega_a."{/Symbol w}_0, a=".a  #font ",80"
 
